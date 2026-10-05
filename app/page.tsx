@@ -1,12 +1,12 @@
 "use client";
 
-import { useRef, useState } from "react";
+import { useState } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
-import { ArrowDownRight, ArrowUpRight, Menu, X, MoveUpRight, Plus, Instagram, Linkedin, ArrowRight } from "lucide-react";
+import { ArrowDownRight, ArrowUpRight, Menu, X, MoveUpRight, Plus, Instagram, Linkedin, CheckCircle2 } from "lucide-react";
 
 const projects = [
   { n: "01", title: "The Stillwater Residence", type: "Private residence · Lahore", year: "2025", image: "photo-1600607687939-ce8a6c25118c", size: "wide" },
-  { n: "02", title: "House of Light", type: "Residential · Islamabad", year: "2024", image: "photo-160021多", size: "tall" },
+  { n: "02", title: "House of Light", type: "Residential · Islamabad", year: "2024", image: "photo-1600210492486-724fe5c67fb0", size: "tall" },
   { n: "03", title: "Form & Function", type: "Commercial · Karachi", year: "2024", image: "photo-1487958449943-2429e8be8625", size: "normal" },
   { n: "04", title: "The Courtyard House", type: "Private residence · Multan", year: "2023", image: "photo-1600607687920-4e2a09cf159d", size: "normal" },
 ];
@@ -64,7 +64,7 @@ export default function Home() {
         <h1><motion.span initial={{ y: "110%" }} animate={{ y: 0 }} transition={{ duration: 1, delay: .15, ease: [.22,1,.36,1] }}>Spaces that</motion.span><motion.span className="indent" initial={{ y: "110%" }} animate={{ y: 0 }} transition={{ duration: 1, delay: .28, ease: [.22,1,.36,1] }}> <em>move</em> us.</motion.span></h1>
         <motion.div className="hero-bottom" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: .9 }}>
           <p>We shape thoughtful environments where material, light and human experience meet. Architecture for a more meaningful everyday.</p>
-          <a href="#work" className="round-link">Explore our work <ArrowDownRight size={19}/></a>
+          <a href="#work" className="primary-cta">Explore selected work <ArrowDownRight size={19}/></a>
         </motion.div>
       </div>
       <div className="hero-visual">
@@ -87,7 +87,7 @@ export default function Home() {
     </section>
 
     <section className="work-section section-pad" id="work">
-      <div className="section-heading"><Reveal><p className="eyebrow">02 — SELECTED WORK / 2023—25</p><h2>Made to <em>matter.</em></h2></Reveal><Reveal delay={.1}><a href="#contact" className="text-link light-link">Discuss a project <ArrowUpRight size={16}/></a></Reveal></div>
+      <div className="section-heading"><Reveal><p className="eyebrow">02 — SELECTED WORK / 2023—25</p><h2>Made to <em>matter.</em></h2></Reveal><Reveal delay={.1}><a href="#contact" className="section-cta">Discuss your project <ArrowUpRight size={16}/></a></Reveal></div>
       <div className="project-grid">
         {projects.map((p,i)=><Reveal key={p.n} delay={i*.08} className={"project-card "+p.size}><a href="#contact" className="project-image-wrap"><img src={i===1 ? "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1400&q=85" : `https://images.unsplash.com/${p.image}?auto=format&fit=crop&w=1400&q=85`} alt={p.title}/><span className="project-arrow"><ArrowUpRight/></span><span className="project-index">{p.n} / 04</span></a><div className="project-meta"><div><h3>{p.title}</h3><p>{p.type}</p></div><span>{p.year}</span></div></Reveal>)}
       </div>
@@ -112,11 +112,27 @@ export default function Home() {
     <section className="contact-section section-pad" id="contact">
       <div className="contact-top"><Reveal><p className="eyebrow">05 — THE NEXT CHAPTER</p><h2>Have a place<br/>in <em>mind?</em></h2></Reveal><Reveal delay={.1}><p className="contact-aside">Every meaningful project begins with a conversation. Tell us what you're imagining—we'd love to hear about it.</p></Reveal></div>
       <div className="contact-grid">
-        <div className="contact-details"><a href="mailto:studio@atelier09.example" className="contact-email">studio@atelier09.example <ArrowUpRight/></a><p>LAHORE, PAKISTAN<br/>AVAILABLE WORLDWIDE</p><div className="socials"><a href="#contact" aria-label="Instagram"><Instagram/></a><a href="#contact" aria-label="LinkedIn"><Linkedin/></a></div></div>
-        <form className="contact-form" onSubmit={e=>{e.preventDefault();setSent(true)}}><div className="form-row"><label>Your name<input required placeholder="Name"/></label><label>Email address<input required type="email" placeholder="Email"/></label></div><label>What are you envisioning?<textarea required rows={3} placeholder="A little about your project..."/></label><button type="submit" className="submit-btn">{sent ? "Thank you — we'll be in touch" : "Send your inquiry"} <ArrowUpRight size={18}/></button><small className="form-note">Demo inquiry form — connect to your preferred email or CRM before launch.</small></form>
+        <div className="contact-details">
+          <span className="contact-kicker">LET'S TALK ABOUT YOUR NEXT SPACE</span>
+          <a href="https://wa.me/923177099746?text=Hello%20Atelier%2009%2C%20I%27d%20like%20to%20discuss%20a%20project." className="contact-whatsapp-link">WhatsApp <ArrowUpRight/></a>
+          <p>+92 317 7097746<br/>LAHORE, PAKISTAN · AVAILABLE WORLDWIDE</p>
+          <div className="contact-points"><span><CheckCircle2 size={15}/> Initial consultation</span><span><CheckCircle2 size={15}/> Residential & commercial</span><span><CheckCircle2 size={15}/> Design-led approach</span></div>
+          <div className="socials"><a href="#contact" aria-label="Instagram"><Instagram/></a><a href="#contact" aria-label="LinkedIn"><Linkedin/></a></div>
+        </div>
+        <form className="contact-form" onSubmit={e=>{e.preventDefault();setSent(true)}}>
+          <div className="form-heading"><span>PROJECT INQUIRY</span><p>Share a few details and we'll know how to start the conversation.</p></div>
+          <div className="form-row"><label>Your name<input required placeholder="Full name"/></label><label>Email address<input required type="email" placeholder="you@example.com"/></label></div>
+          <div className="form-row"><label>Phone / WhatsApp<input placeholder="+92 3XX XXXXXXX"/></label><label>Project type<select defaultValue=""><option value="" disabled>Select project type</option><option>Residential</option><option>Commercial</option><option>Interior design</option><option>Renovation</option><option>3D visualization</option><option>Consultation</option></select></label></div>
+          <label>Tell us about the project<textarea required rows={4} placeholder="Location, approximate size, timeline, or anything you'd like us to know..."/></label>
+          <button type="submit" className="submit-btn">{sent ? "Inquiry received — thank you" : "Start the conversation"} <ArrowUpRight size={18}/></button>
+          <small className="form-note">This demo form is ready to connect to email or a CRM before launch.</small>
+        </form>
       </div>
     </section>
     <footer className="footer"><a href="#home" className="brand footer-brand"><span className="brand-mark">A<span>.</span></span><span className="brand-name">ATELIER / 09<small>ARCHITECTURE & DESIGN</small></span></a><span>© 2025 ATELIER 09. CONCEPT WEBSITE.</span><a href="#home">BACK TO TOP ↑</a></footer>
-    <a className="floating-contact" href="#contact">Let's talk <MoveUpRight size={15}/></a>
+    <a className="floating-contact" href="https://wa.me/923177099746?text=Hello%20Atelier%2009%2C%20I%27d%20like%20to%20discuss%20a%20project." target="_blank" rel="noreferrer" aria-label="Chat on WhatsApp at +92 317 7097746">
+      <span className="wa-icon" aria-hidden="true"><svg viewBox="0 0 32 32" fill="none"><path d="M16 3.5a12.45 12.45 0 0 0-10.7 19L3.5 28.5l6.2-1.6A12.5 12.5 0 1 0 16 3.5Z" stroke="currentColor" stroke-width="2.2"/><path d="M11.8 10.2c.4-.4 1-.4 1.3.1l1.1 1.7c.3.4.2 1-.1 1.3l-.7.7c.7 1.4 1.8 2.5 3.2 3.2l.7-.7c.3-.3.9-.4 1.3-.1l1.7 1.1c.5.3.5.9.1 1.3l-.7.8c-.6.7-1.5 1-2.4.8-4.2-1-7.5-4.3-8.5-8.5-.2-.9.1-1.8.8-2.4l.8-.7Z" fill="currentColor"/></svg></span>
+      <span className="floating-copy"><strong>WhatsApp</strong><small>+92 317 7097746</small></span><MoveUpRight size={15}/>
+    </a>
   </main>;
 }
