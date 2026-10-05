@@ -89,3 +89,45 @@
 .floating-contact:hover .floating-wa-image{transform:scale(1.05);filter:drop-shadow(0 14px 24px rgba(20,100,30,.34))}
 .floating-copy{display:none!important}
 @media(max-width:650px){.floating-contact{right:10px;bottom:10px;width:62px;height:62px;min-width:62px}.floating-wa-image{width:58px;height:58px}.floating-contact::before{inset:1px}}
+
+/* Final mobile CTA alignment + refined WhatsApp icon */
+@media(max-width:650px){
+  .nav.open .nav-contact{
+    display:flex!important;
+    align-items:center!important;
+    justify-content:space-between!important;
+    width:100%!important;
+    box-sizing:border-box!important;
+    margin-top:12px!important;
+    padding:15px 18px!important;
+    border:1px solid rgba(189,197,168,.72)!important;
+    border-radius:999px!important;
+    background:rgba(189,197,168,.14)!important;
+  }
+  .hero-bottom{
+    flex-direction:column!important;
+    align-items:flex-start!important;
+    justify-content:flex-start!important;
+    gap:20px!important;
+  }
+  .hero-bottom p{max-width:230px!important;margin:0!important}
+  .primary-cta{
+    align-self:flex-start!important;
+    margin:0!important;
+  }
+}
+.floating-wa-image{
+  width:64px!important;
+  height:64px!important;
+  object-fit:contain!important;
+  filter:drop-shadow(0 7px 14px rgba(14,112,38,.25))!important;
+}
+.floating-contact::before{
+  inset:0!important;
+  border:2px solid rgba(35,216,62,.32)!important;
+  box-shadow:0 0 0 5px rgba(35,216,62,.07)!important;
+}
+@media(max-width:650px){
+  .floating-contact{width:60px!important;height:60px!important;right:12px!important;bottom:12px!important}
+  .floating-wa-image{width:56px!important;height:56px!important}
+}
