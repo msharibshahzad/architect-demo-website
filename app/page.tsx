@@ -51,7 +51,7 @@ export default function Home() {
   return <main>
     <motion.div className="scroll-progress" style={{ scaleX: scrollYProgress }} />
     <header className="site-header">
-      <a href="#home" className="brand" onClick={closeMenu}><span className="brand-mark">A<span>.</span></span><span className="brand-name">ATELIER / 09<small>ARCHITECTURE & DESIGN</small></span></a>
+      <a href="#home" className="brand" onClick={closeMenu}><span className="brand-logo">Your Logo</span><span className="brand-name">YOUR NAME<small>ARCHITECTURE & DESIGN</small></span></a>
       <nav className={menuOpen ? "nav open" : "nav"}>
         <a href="#studio" onClick={closeMenu}>Studio</a><a href="#work" onClick={closeMenu}>Selected work</a><a href="#expertise" onClick={closeMenu}>Expertise</a><a href="#contact" onClick={closeMenu} className="nav-contact">Start a project <ArrowUpRight size={14}/></a>
       </nav>
@@ -81,7 +81,7 @@ export default function Home() {
       <Reveal><p className="eyebrow dark">01 — OUR POINT OF VIEW</p></Reveal>
       <div className="intro-grid">
         <Reveal><h2>Good spaces don't just occupy land.<br/><em>They leave a feeling.</em></h2></Reveal>
-        <Reveal delay={.15}><div className="intro-text"><p>At Atelier 09, we believe architecture is an act of listening. To the landscape, to the light, to the lives that will unfold within a space.</p><p>Our practice brings clarity to complexity—creating enduring architecture with a quiet confidence and a deep respect for its context.</p><a className="text-link" href="#contact">Meet the studio <ArrowUpRight size={16}/></a></div></Reveal>
+        <Reveal delay={.15}><div className="intro-text"><p>At Your Name, we believe architecture is an act of listening. To the landscape, to the light, to the lives that will unfold within a space.</p><p>Our practice brings clarity to complexity—creating enduring architecture with a quiet confidence and a deep respect for its context.</p><a className="text-link" href="#contact">Meet the studio <ArrowUpRight size={16}/></a></div></Reveal>
       </div>
       <div className="intro-stats"><div><strong>12<span>+</span></strong><small>YEARS OF PRACTICE</small></div><div><strong>48</strong><small>PROJECTS REALIZED</small></div><div><strong>06</strong><small>DESIGN AWARDS</small></div><div className="stat-note">Small by design.<br/>Ambitious by nature.</div></div>
     </section>
@@ -106,7 +106,7 @@ export default function Home() {
 
     <section className="manifesto">
       <div className="manifesto-image"/>
-      <div className="manifesto-content"><Reveal><p className="eyebrow">A NOTE ON OUR APPROACH</p><h2>Less, but<br/><em>with intention.</em></h2><p>We don't believe in architecture that shouts. We believe in spaces that reveal themselves slowly—through a shifting shadow, a tactile surface, a view that makes you pause.</p><span className="signature">Atelier 09 <i>✳</i></span></Reveal></div>
+      <div className="manifesto-content"><Reveal><p className="eyebrow">A NOTE ON OUR APPROACH</p><h2>Less, but<br/><em>with intention.</em></h2><p>We don't believe in architecture that shouts. We believe in spaces that reveal themselves slowly—through a shifting shadow, a tactile surface, a view that makes you pause.</p><span className="signature">Your Name <i>✳</i></span></Reveal></div>
     </section>
 
     <section className="contact-section section-pad" id="contact">
@@ -114,7 +114,7 @@ export default function Home() {
       <div className="contact-grid">
         <div className="contact-details">
           <span className="contact-kicker">LET'S TALK ABOUT YOUR NEXT SPACE</span>
-          <a href="https://wa.me/923177099746?text=Hello%20Atelier%2009%2C%20I%27d%20like%20to%20discuss%20a%20project." className="contact-whatsapp-link">WhatsApp <ArrowUpRight/></a>
+          <a href="https://wa.me/923177099746?text=Hello%20Your%20Name%2C%20I%27d%20like%20to%20discuss%20a%20project." className="contact-whatsapp-link">WhatsApp <ArrowUpRight/></a>
           <p>+92 317 7097746<br/>LAHORE, PAKISTAN · AVAILABLE WORLDWIDE</p>
           <div className="contact-points"><span><CheckCircle2 size={15}/> Initial consultation</span><span><CheckCircle2 size={15}/> Residential & commercial</span><span><CheckCircle2 size={15}/> Design-led approach</span></div>
           <div className="socials"><a href="#contact" aria-label="Instagram"><Instagram/></a><a href="#contact" aria-label="LinkedIn"><Linkedin/></a></div>
@@ -129,8 +129,8 @@ export default function Home() {
         </form>
       </div>
     </section>
-    <footer className="footer"><a href="#home" className="brand footer-brand"><span className="brand-mark">A<span>.</span></span><span className="brand-name">ATELIER / 09<small>ARCHITECTURE & DESIGN</small></span></a><span>© 2025 ATELIER 09. CONCEPT WEBSITE.</span><a href="#home">BACK TO TOP ↑</a></footer>
-    <a className="floating-contact" href="https://wa.me/923177099746?text=Hello%20Atelier%2009%2C%20I%27d%20like%20to%20discuss%20a%20project." target="_blank" rel="noreferrer" aria-label="Chat on WhatsApp at +92 317 7097746">
+    <footer className="footer"><a href="#home" className="brand footer-brand"><span className="brand-logo">Your Logo</span><span className="brand-name">YOUR NAME<small>ARCHITECTURE & DESIGN</small></span></a><span>© 2025 YOUR NAME. CONCEPT WEBSITE.</span><a href="#home">BACK TO TOP ↑</a></footer>
+    <a className="floating-contact" href="https://wa.me/923177099746?text=Hello%20Your%20Name%2C%20I%27d%20like%20to%20discuss%20a%20project." target="_blank" rel="noreferrer" aria-label="Chat on WhatsApp at +92 317 7097746">
       <span className="wa-icon" aria-hidden="true"><svg viewBox="0 0 32 32" fill="none"><path d="M16 3.5a12.45 12.45 0 0 0-10.7 19L3.5 28.5l6.2-1.6A12.5 12.5 0 1 0 16 3.5Z" stroke="currentColor" stroke-width="2.2"/><path d="M11.8 10.2c.4-.4 1-.4 1.3.1l1.1 1.7c.3.4.2 1-.1 1.3l-.7.7c.7 1.4 1.8 2.5 3.2 3.2l.7-.7c.3-.3.9-.4 1.3-.1l1.7 1.1c.5.3.5.9.1 1.3l-.7.8c-.6.7-1.5 1-2.4.8-4.2-1-7.5-4.3-8.5-8.5-.2-.9.1-1.8.8-2.4l.8-.7Z" fill="currentColor"/></svg></span>
       <span className="floating-copy"><strong>WhatsApp</strong><small>+92 317 7097746</small></span><MoveUpRight size={15}/>
     </a>
