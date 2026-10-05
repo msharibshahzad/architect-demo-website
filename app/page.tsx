@@ -131,8 +131,7 @@ export default function Home() {
     </section>
     <footer className="footer"><a href="#home" className="brand footer-brand"><span className="brand-logo">Your Logo</span><span className="brand-name">YOUR NAME<small>ARCHITECTURE & DESIGN</small></span></a><span>© 2025 YOUR NAME. CONCEPT WEBSITE.</span><a href="#home">BACK TO TOP ↑</a></footer>
     <a className="floating-contact" href="https://wa.me/923177099746?text=Hello%20Your%20Name%2C%20I%27d%20like%20to%20discuss%20a%20project." target="_blank" rel="noreferrer" aria-label="Chat on WhatsApp at +92 317 7097746">
-      <span className="wa-icon" aria-hidden="true"><svg viewBox="0 0 32 32" fill="none"><path d="M16 3.5a12.45 12.45 0 0 0-10.7 19L3.5 28.5l6.2-1.6A12.5 12.5 0 1 0 16 3.5Z" stroke="currentColor" stroke-width="2.2"/><path d="M11.8 10.2c.4-.4 1-.4 1.3.1l1.1 1.7c.3.4.2 1-.1 1.3l-.7.7c.7 1.4 1.8 2.5 3.2 3.2l.7-.7c.3-.3.9-.4 1.3-.1l1.7 1.1c.5.3.5.9.1 1.3l-.7.8c-.6.7-1.5 1-2.4.8-4.2-1-7.5-4.3-8.5-8.5-.2-.9.1-1.8.8-2.4l.8-.7Z" fill="currentColor"/></svg></span>
-      <span className="floating-copy"><strong>WhatsApp</strong><small>+92 317 7097746</small></span><MoveUpRight size={15}/>
+      <img className="floating-wa-image" src="/whatsapp-icon.svg" alt="" aria-hidden="true" />
     </a>
   </main>;
 }
